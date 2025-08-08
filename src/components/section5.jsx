@@ -14,7 +14,7 @@ function Sec5() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:5000/send-email", {
+      const res = await fetch("https://backend-dhrubo-s-portfolio-website-1.onrender.com/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
