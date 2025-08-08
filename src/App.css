@@ -1,0 +1,870 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.App {
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+
+}
+
+.navbar {
+  background-color: rgb(28, 3, 48);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  top: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 9999; /* Set the navbar to fixed position */
+
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+
+}
+
+.navbar li {
+  list-style: none;
+}
+
+.navbar ul li {
+  text-decoration: none;
+  margin: 0 23px;
+  color: white;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar ul li a:hover {
+
+  color: rgb(126, 126, 189);
+
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.left {
+  color: rgb(240, 243, 240);
+  height: fit-content;
+  font-size: 1.5rem;
+
+}
+
+.right {
+  color: rgb(240, 243, 240);
+
+
+
+  height: fit-content;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*section*/
+.firstSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5% 2%;
+  color: white;
+  margin-bottom: 5rem;
+  margin-top: 8rem;
+}
+
+
+
+.firstSection>div {
+  width: 35%;
+}
+
+.purple {
+  color: rgb(168, 8, 168)
+}
+
+.leftSection {
+  font-size: 3rem;
+  margin: 55px 0;
+
+  margin-left: 5%;
+  align-items: center;
+
+}
+
+.rightSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.leftSection, .rightSection {
+  flex: 1 1 40%;
+  text-align: center;
+  margin: 20px;
+}
+
+.firstSection .profile-buttons {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Border-only styling */
+.icon-btn.border-only {
+  border: 2px solid #ff00ff;
+  background-color: transparent;
+  color: #ff00ff;
+}
+
+.icon-btn.border-only:hover {
+  background-color: rgba(255, 0, 255, 0.1);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.4);
+}
+
+/* Profile Image (Planet) */
+.rightSection img.pfp {
+  border-radius: 50%;
+  width: 380px;
+  height: 380px;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+  z-index: 2;
+  position: relative;
+}
+
+/* Saturn Ring with gentle wave */
+.rightSection::before {
+  content: "";
+  position: absolute;
+  width: 580px;
+  height: 260px;
+  border: 3px solid white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-20deg);
+  opacity: 0.6;
+  animation: waveRing 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+/* Orbiting Star (unchanged) */
+.rightSection::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 6px white;
+  top: 50%;
+  left: 50%;
+  transform: rotate(0deg) translate(160px) rotate(0deg);
+  animation: orbitOutside 5s linear infinite;
+  transform-origin: center center;
+  z-index: 3;
+}
+.orbitContainer {
+  position: relative;
+  width: 380px;
+  height: 380px;
+}
+
+/* Star orbit animation (unchanged) */
+@keyframes orbitOutside {
+  0% {
+    transform: rotate(0deg) translate(260px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translate(260px) rotate(-360deg);
+  }
+}
+
+/* Ring gentle wave effect */
+@keyframes waveRing {
+
+  0%,
+  100% {
+    transform: translate(-50%, -50%) rotate(-20deg) scale(1);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(-20deg) scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+
+#element {
+  color: rgb(221, 112, 213);
+}
+
+/*Section 2*/
+.secondSection {
+  max-width: 80vw;
+  margin: auto;
+}
+
+.section {
+  padding: 60px 20px;
+  background-color: rgb(15, 3, 24);
+  color: #fff;
+  text-align: center;
+}
+
+.section h1 span {
+  color: #ff00ff;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 40px;
+
+}
+
+.about-image {
+  width: 50%;
+  height: 40%;
+}
+
+.about-image img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 10%;
+  border: 4px solid #ff00ff;
+  justify-content: center;
+  margin: 20px;
+}
+
+.about-text {
+  max-width: 600px;
+  margin-left: 40px;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.skills {
+  margin-top: 20px;
+}
+
+.skill p {
+  margin: 5px 0;
+}
+
+.progress {
+  width: 100%;
+  background: #333;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress div {
+  height: 10px;
+  background: #ff00ff;
+}
+
+.about-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.about-stats div h3 {
+
+  font-size: 2rem;
+  color: #ff00ff;
+}
+
+.about-stats div p {
+  font-size: 14px;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+
+}
+
+/* ======================= */
+/*        Projects         */
+/* ======================= */
+
+.projectsSection {
+  background-color: rgb(15, 3, 24);
+  color: #fff;
+  padding: 60px 20px;
+  margin-bottom: 5.5rem;
+}
+
+.projectsSection h1 {
+  text-align: center;
+  color: #ff00ff;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+.projectsContainer {
+  font-size: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.projectCard {
+  border: 1px solid #333;
+  border-radius: 15px;
+  background-color: #151525;
+  width: 15%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.projectCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+}
+
+.projectCard h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.projectCard p {
+  font-size: 1.3rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.githubLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ff00ff;
+  border: 1px solid #ff00ff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.githubLink:hover {
+  background-color: #ff00ff;
+  color: #151525;
+}
+
+.githubLink img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.git {
+  border-radius: 30%;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .firstSection {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .leftSection,
+  .rightSection {
+    width: 100%;
+    margin: 10px 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .leftSection {
+    font-size: 1.5rem;
+  }
+
+  .rightSection img.pfp {
+    width: 180px;
+    height: 180px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text {
+    margin: 20px;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .projectCard {
+    width: 85%;
+    font-size: 1rem;
+  }
+
+  .projectsContainer {
+    gap: 30px;
+  }
+}
+
+.projectsSection h1 {
+  font-size: 3rem;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 480px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .firstSection {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .leftSection {
+    font-size: 1.2rem;
+    margin-left: 0;
+  }
+
+  .rightSection img.pfp {
+    width: 150px;
+    height: 150px;
+  }
+
+  .projectsSection h1 {
+    font-size: 2rem;
+    margin-bottom: 60px;
+  }
+
+  .projectCard {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    margin-left: 0;
+    padding: 0 15px;
+  }
+
+  .about-image img {
+    width: 80%;
+    height: auto;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .leftSection {
+    font-size: 3.2rem;
+  }
+
+  .rightSection img.pfp {
+    width: 400px;
+    height: 400px;
+  }
+
+  .projectCard {
+    width: 18%;
+  }
+}
+/*section 4 Skills*/
+/* ======================= */
+/*        Tech Stack       */
+/* ======================= */
+
+.techStackSection {
+  background-color: rgb(15, 3, 24);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.techStackSection h1 {
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 60px;
+}
+
+.techStackSection h1 span {
+  color: #ff00ff;
+}
+
+.techCategory {
+  background-color: #151525;
+  border: 2px solid #ff00ff;
+  border-radius: 25px;
+  padding: 50px 30px;
+  margin: 40px auto;
+  max-width: 1500px;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.techCategory:hover {
+  transform: scale(1.02);
+}
+
+.techCategory h2 {
+  font-size: 2.5rem;
+  color: #ff00ff;
+  margin-top: auto;
+  margin-bottom: 4rem;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 40px; /* increased gap for better spacing */
+  justify-items: center;
+}
+
+
+.skillCard {
+  background-color: #1a1a2e;
+  border: 2px solid #ff00ff;
+  border-radius: 20px;
+  width: 180px;   /* increased */
+  height: 200px;  /* increased */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px rgba(255, 0, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  animation: waveBounce 2.5s ease-in-out infinite;
+}
+
+
+.skillCard:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.7);
+}
+
+.skillIcon {
+  margin-top: 1.5rem;
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+
+.skillCard h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+}
+
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 768px) {
+  .techStackSection h1 {
+    font-size: 2.5rem;
+  }
+
+  .techCategory {
+    padding: 30px 20px;
+    max-width: 90%;
+    margin: 20px auto;
+  }
+
+  .techCategory h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .skillsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+  }
+
+  .skillCard {
+    width: 100px;
+    height: 110px;
+  }
+
+  .skillIcon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skillCard h3 {
+    font-size: 0.75rem;
+  }
+}
+/* Wavy bounce animation */
+.skillCard {
+  animation: waveBounce 2.5s ease-in-out infinite;
+}
+
+/* Optional: Delay for each to feel more natural */
+.skillCard:nth-child(odd) {
+  animation-delay: 0.3s;
+}
+.skillCard:nth-child(even) {
+  animation-delay: 0.6s;
+}
+
+/* Define wave bounce animation */
+@keyframes waveBounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-6px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  75% {
+    transform: translateY(-4px);
+  }
+}
+
+/*Section for Contact Me*/
+.contactSection {
+  background-color:rgb(15, 3, 24);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.contactSection h1 {
+  font-size: 3.5rem;
+  margin-bottom: 7rem;
+  margin-top: 0rem;
+
+}
+
+.contactSection h1 span {
+  color: #ff00ff;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contactInfo {
+  flex: 1 1 500px;
+  background-color: #151525;
+  border: 2px solid #ff00ff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+  text-align: left;
+  font-size: 1.3rem;
+}
+
+.contactInfo h2 {
+  color: #ff00ff;
+  margin-bottom: 20px;
+}
+
+.contactForm {
+  flex: 1 1 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  background-color: #151525;
+  border: 2px solid #ff00ff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+}
+
+.contactForm input,
+.contactForm textarea {
+  background-color: #1a1a2e;
+  border: 1px solid #ff00ff;
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+  color: #aaa;
+}
+
+.contactForm button {
+  background-color: #ff00ff;
+  color: #1a1a2e;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contactForm button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.7);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .contactSection h1 {
+    font-size: 2.5rem;
+  }
+
+  .contactContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/*FOOTER*/
+.footer {
+  background-color: rgb(15, 3, 24);
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 2px solid #ff00ff;
+  margin-top: 5rem;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.footer-links a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.footer-links a:hover {
+  transform: scale(1.2);
+}
+
+.footer-links img {
+  width: 28px;
+  height: 28px;
+  filter: drop-shadow(0 0 4px #ff00ff);
+}
