@@ -35,7 +35,7 @@ function Sec() {
         <div> and I am a Passionate </div>
         <div id="element"><code>{MyComponent()}</code></div>
         <div className="profile-buttons">
-          <a href="/Dhrubojyoti_Bhattacharjee_SDE_CV.pdf" download className="icon-btn border-only">
+          <a href="/public/Dhrubojyoti_Bhattacharjee_SDE_CV.pdf" download className="icon-btn border-only">
             <img src={ resume } alt="Resume" />
             My Resume
           </a>
