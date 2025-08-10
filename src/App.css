@@ -942,7 +942,7 @@ html, body {
 
 
 /*mobile*/
-@media screen and (max-width : 768px) {
+@media screen and (max-width : 200px) {
   html, body {
   height: 100%;
   width: 100%;
