@@ -4,7 +4,7 @@ const projects = [
   {
     title: "Jaison Voice Assistant",
     description: "AI voice assistant with gesture control, file operations & web automation.",
-    github: "https://github.com/dhrubojyoti73/Jaison-Voice-Assistant",
+    github: "https://github.com/dhrubooou/AI-voice-assistant",
   },
   {
     title: "AI Traffic Detector",
@@ -14,12 +14,12 @@ const projects = [
   {
     title: "News Feed Website",
     description: "Dynamic news site fetching live articles via APIs in real-time.",
-    github: "https://github.com/dhrubojyoti73/Real-Time-News-Site",
+    github: "https://github.com/dhrubooou/Newsapp21",
   },
   {
     title: "Portfolio Website",
     description: "My personal responsive portfolio built using React and Node.js.",
-    github: "https://github.com/dhrubojyoti73/Portfolio-Website",
+    github: "https://github.com/dhrubooou/Front_end_Dhrubo-s-Portfolio-Website",
   },
 ];
 
