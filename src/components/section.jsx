@@ -52,7 +52,7 @@ function Sec() {
       </div>
       <div className="rightSection">
         <div className="orbitContainer">
-          <img src="https://media.licdn.com/dms/image/v2/D5603AQEt5eQZpuVItQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1706942512495?e=1757548800&v=beta&t=woK3TZX7QZhGJFmifhEh3NJjokjLJwAMg1Zl2xAT2V8" alt="Dhrubo's_Profile_picture" className="pfp" />
+          <img src="https://media.licdn.com/dms/image/v2/D5603AQFMK8KRdMAyNA/profile-displayphoto-crop_800_800/B56ZlcJQzsKEAM-/0/1758187557559?e=1761177600&v=beta&t=ah65gTjhaBLqz3g53u1MuSDL0LYKNUbDF-FeyWz31KI" alt="Dhrubo's_Profile_picture" className="pfp" />
         </div>
       </div>
 
