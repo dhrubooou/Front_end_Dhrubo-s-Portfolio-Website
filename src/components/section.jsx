@@ -1,72 +1,83 @@
 import React from "react";
-import Typed from 'typed.js';
+import Typed from "typed.js";
 import resume from "../assets/icons8-resume-96.png";
 import linkedin from "../assets/icons8-linkedin-96.png";
 import github from "../assets/icons8-github2.png";
-function MyComponent() {
+import Pic from '../assets/Gemini_Generated_Image_g991peg991peg991 (1).jpg';
 
+function MyComponent() {
   const el = React.useRef(null);
 
   React.useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['Web Developer.', 'Software Engineer.'],
+      strings: ["Web Developer.", "Software Engineer."],
       typeSpeed: 50,
       backSpeed: 25,
       loop: true,
     });
 
     return () => {
-
       typed.destroy();
     };
   }, []);
 
-  return (
-    <span ref={el} />
-
-  );
+  return <span ref={el} />;
 }
 
 function Sec() {
   return (
+    <section className="firstSection" id="home">
+      <div className="leftSection">
+        <p>
+          Hi, my name is{" "}
+          <span className="purple">Dhrubojyoti Bhattacharjee</span>
+          <br />
+          and I am a Passionate <br/><code class="purple"><MyComponent /></code>
+        </p>
 
-    <section class="firstSection" id="home">
-      <div class="leftSection">Hi , My name is <span class="purple"><code>Dhrubojyoti Bhattacharjee</code></span> <br />
-        <div> and I am a Passionate </div>
-        <div id="element"><code>{MyComponent()}</code></div>
         <div className="profile-buttons">
-<<<<<<< HEAD
-          <a href="https://drive.google.com/file/d/1wrz0SHlxtZLn7dvOzQqwGNHiQ8aaGjUR/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="icon-btn border-only">
-=======
-          <a href="https://drive.google.com/file/d/1wrz0SHlxtZLn7dvOzQqwGNHiQ8aaGjUR/view?usp=drive_link" target="_blank" rel="noopener noreferrer"  className="icon-btn border-only">
->>>>>>> 3bb7fc69e91368fc8297d8c72b164349e8e94a99
-            <img src={ resume } alt="Resume" />
+          <a
+            href="https://drive.google.com/file/d/1wrz0SHlxtZLn7dvOzQqwGNHiQ8aaGjUR/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="icon-btn border-only"
+          >
+            <img src={resume} alt="Resume" />
             My Resume
           </a>
-          <a href="https://github.com/dhrubooou" target="_blank" rel="noopener noreferrer" className="icon-btn border-only">
-            <img src={ github } alt="GitHub" />
+
+          <a
+            href="https://github.com/dhrubooou"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="icon-btn border-only"
+          >
+            <img src={github} alt="GitHub" />
             GitHub
           </a>
-          <a href="https://www.linkedin.com/in/dhrubojyoti007/" target="_blank" rel="noopener noreferrer" className="icon-btn border-only">
-            <img src={ linkedin } alt="LinkedIn" />
+
+          <a
+            href="https://www.linkedin.com/in/dhrubojyoti007/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="icon-btn border-only"
+          >
+            <img src={linkedin} alt="LinkedIn" />
             LinkedIn
           </a>
         </div>
-
       </div>
+
       <div className="rightSection">
         <div className="orbitContainer">
-<<<<<<< HEAD
-          <img src="https://media.licdn.com/dms/image/v2/D5603AQFMK8KRdMAyNA/profile-displayphoto-crop_800_800/B56ZlcJQzsKEAM-/0/1758187557559?e=1761782400&v=beta&t=dpjl4gzTdTJfphFcqaWr_eXY1nmnldv3NkelTq-6KGs" alt="Dhrubo's_Profile_picture" className="pfp" />
-=======
-          <img src="https://media.licdn.com/dms/image/v2/D5603AQFMK8KRdMAyNA/profile-displayphoto-crop_800_800/B56ZlcJQzsKEAM-/0/1758187557559?e=1761177600&v=beta&t=ah65gTjhaBLqz3g53u1MuSDL0LYKNUbDF-FeyWz31KI" alt="Dhrubo's_Profile_picture" className="pfp" />
->>>>>>> 3bb7fc69e91368fc8297d8c72b164349e8e94a99
+          <img
+            src={Pic}
+            alt="Dhrubojyoti Bhattacharjee"
+            className="pfp"
+          />
         </div>
       </div>
-
-
     </section>
-
   );
 }
 

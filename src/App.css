@@ -129,7 +129,7 @@ html, body {
 }
 
 .purple {
-  color: rgb(168, 8, 168)
+  color: rgb(50, 204, 221);
 }
 
 .leftSection {
@@ -1076,9 +1076,6 @@ html, body {
   width: 100%;
 }
 
-.purple {
-  color: rgb(168, 8, 168)
-}
 
 .leftSection {
   font-size: 3rem;
@@ -1880,7 +1877,90 @@ html, body {
   }
 }
 }
-<<<<<<< HEAD
-/* Updated*/
-=======
->>>>>>> 3bb7fc69e91368fc8297d8c72b164349e8e94a99
+
+/* ------------------------- */
+/* 📱 RESPONSIVE FOR PHONES */
+/* ------------------------- */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+    overflow-x: hidden;
+  }
+
+  .firstSection {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .leftSection {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .leftSection p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .purple {
+    display: block;
+    font-size: 18px;
+  }
+
+  .profile-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 80%;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 12px;
+  }
+
+  .icon-btn img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .rightSection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .pfp {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .orbitContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  h1, h2, h3 {
+    font-size: 18px;
+  }
+
+  .typed-cursor {
+    font-size: 20px;
+  }
+
+  /* Hide large decorative elements if any */
+  .background-animation, .extra-decor {
+    display: none;
+  }
+}
