@@ -70,6 +70,7 @@ function Sec() {
 
       <div className="rightSection">
         <div className="orbitContainer">
+
           <img
             src={Pic}
             alt="Dhrubojyoti Bhattacharjee"
