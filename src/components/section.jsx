@@ -3,6 +3,7 @@ import Typed from 'typed.js';
 import resume from "../assets/icons8-resume-96.png";
 import linkedin from "../assets/icons8-linkedin-96.png";
 import github from "../assets/icons8-github2.png";
+import Pic from '../assets/Gemini_Generated_Image_g991peg991peg991 (1).jpg';
 function MyComponent() {
 
   const el = React.useRef(null);
@@ -57,9 +58,8 @@ function Sec() {
       <div className="rightSection">
         <div className="orbitContainer">
 <<<<<<< HEAD
-          <img src="https://media.licdn.com/dms/image/v2/D5603AQFMK8KRdMAyNA/profile-displayphoto-crop_800_800/B56ZlcJQzsKEAM-/0/1758187557559?e=1761782400&v=beta&t=dpjl4gzTdTJfphFcqaWr_eXY1nmnldv3NkelTq-6KGs" alt="Dhrubo's_Profile_picture" className="pfp" />
+          <img src={Pic} alt="Dhrubo's_Profile_picture" className="pfp" />
 =======
-          <img src="src/assets/professional-headshot-1761469097102.png" alt="Dhrubo's_Profile_picture" className="pfp" />
 >>>>>>> 3bb7fc69e91368fc8297d8c72b164349e8e94a99
         </div>
       </div>
