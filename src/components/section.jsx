@@ -59,7 +59,7 @@ function Sec() {
 <<<<<<< HEAD
           <img src="https://media.licdn.com/dms/image/v2/D5603AQFMK8KRdMAyNA/profile-displayphoto-crop_800_800/B56ZlcJQzsKEAM-/0/1758187557559?e=1761782400&v=beta&t=dpjl4gzTdTJfphFcqaWr_eXY1nmnldv3NkelTq-6KGs" alt="Dhrubo's_Profile_picture" className="pfp" />
 =======
-          <img src="https://media.licdn.com/dms/image/v2/D5603AQFMK8KRdMAyNA/profile-displayphoto-crop_800_800/B56ZlcJQzsKEAM-/0/1758187557559?e=1761177600&v=beta&t=ah65gTjhaBLqz3g53u1MuSDL0LYKNUbDF-FeyWz31KI" alt="Dhrubo's_Profile_picture" className="pfp" />
+          <img src="src/assets/professional-headshot-1761469097102.png" alt="Dhrubo's_Profile_picture" className="pfp" />
 >>>>>>> 3bb7fc69e91368fc8297d8c72b164349e8e94a99
         </div>
       </div>
