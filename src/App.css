@@ -14,12 +14,12 @@ html, body {
 }
 
 .navbar {
-  background-color: rgb(28, 3, 48);
+  background-color: #0f0a1e;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 12px rgba(99, 102, 241, 0.15);
   top: 0;
   width: 100%;
   position: fixed;
@@ -27,7 +27,7 @@ html, body {
 
 }
 .navbar {
-  background-color: rgb(28, 3, 48);
+  background-color: #0f0a1e;
   padding: 1rem 2rem;
 }
 
@@ -54,7 +54,7 @@ html, body {
 
 .navbar ul li a:hover {
 
-  color: rgb(126, 126, 189);
+  color: #c084fc;
 
 }
 
@@ -129,7 +129,7 @@ html, body {
 }
 
 .purple {
-  color: rgb(50, 204, 221);
+  color: #38bdf8;
 }
 
 .leftSection {
@@ -182,15 +182,15 @@ html, body {
 
 /* Border-only styling */
 .icon-btn.border-only {
-  border: 2px solid #ff00ff;
+  border: 2px solid #a855f7;
   background-color: transparent;
-  color: #ff00ff;
+  color: #a855f7;
 }
 
 .icon-btn.border-only:hover {
-  background-color: rgba(255, 0, 255, 0.1);
+  background-color: rgba(168, 85, 247, 0.1);
   transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(255, 0, 255, 0.4);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
 }
 
 /* Profile Image (Planet) */
@@ -199,8 +199,8 @@ html, body {
   width: 380px;
   height: 380px;
   object-fit: cover;
-  border: 4px solid white;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+  border: 4px solid rgba(168, 85, 247, 0.7);
+  box-shadow: 0 0 35px rgba(168, 85, 247, 0.3), 0 0 15px rgba(99, 102, 241, 0.2);
   z-index: 2;
   position: relative;
 }
@@ -271,7 +271,7 @@ html, body {
 
 
 #element {
-  color: rgb(221, 112, 213);
+  color: #c084fc;
 }
 
 /*Section 2*/
@@ -282,13 +282,13 @@ html, body {
 
 .section {
   padding: 60px 20px;
-  background-color: rgb(15, 3, 24);
+  background-color: #0b0914;
   color: #fff;
   text-align: center;
 }
 
 .section h1 span {
-  color: #ff00ff;
+  color: #a855f7;
 }
 
 .about-content {
@@ -310,7 +310,7 @@ html, body {
   height: 80%;
   object-fit: cover;
   border-radius: 10%;
-  border: 4px solid #ff00ff;
+  border: 4px solid #a855f7;
   justify-content: center;
   margin: 20px;
 }
@@ -332,14 +332,14 @@ html, body {
 
 .progress {
   width: 100%;
-  background: #333;
+  background: #2a2540;
   border-radius: 5px;
   overflow: hidden;
 }
 
 .progress div {
   height: 10px;
-  background: #ff00ff;
+  background: #a855f7;
 }
 
 .about-stats {
@@ -351,7 +351,7 @@ html, body {
 .about-stats div h3 {
 
   font-size: 2rem;
-  color: #ff00ff;
+  color: #a855f7;
 }
 
 .about-stats div p {
@@ -368,15 +368,14 @@ html, body {
 /* ======================= */
 
 .projectsSection {
-  background-color: rgb(15, 3, 24);
+  background-color: #0b0914;
   color: #fff;
   padding: 60px 20px;
-  margin-bottom: 5.5rem;
 }
 
 .projectsSection h1 {
   text-align: center;
-  color: #ff00ff;
+  color: #a855f7;
   margin-bottom: 40px;
   font-size: 2.5rem;
 }
@@ -392,20 +391,20 @@ html, body {
 .projectCard {
   border: 1px solid #333;
   border-radius: 15px;
-  background-color: #151525;
+  background-color: #13102a;
   width: 15%;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
 }
 
 .projectCard:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
 }
 
 .projectCard h3 {
@@ -425,16 +424,16 @@ html, body {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: #ff00ff;
-  border: 1px solid #ff00ff;
+  color: #a855f7;
+  border: 1px solid #a855f7;
   padding: 8px 12px;
   border-radius: 8px;
   transition: background-color 0.3s ease;
 }
 
 .githubLink:hover {
-  background-color: #ff00ff;
-  color: #151525;
+  background-color: #a855f7;
+  color: #13102a;
 }
 
 .githubLink img {
@@ -575,7 +574,7 @@ html, body {
 /* ======================= */
 
 .techStackSection {
-  background-color: rgb(15, 3, 24);
+  background-color: #0b0914;
   color: #fff;
   padding: 80px 20px;
   text-align: center;
@@ -588,17 +587,17 @@ html, body {
 }
 
 .techStackSection h1 span {
-  color: #ff00ff;
+  color: #a855f7;
 }
 
 .techCategory {
-  background-color: #151525;
-  border: 2px solid #ff00ff;
+  background-color: #13102a;
+  border: 2px solid #a855f7;
   border-radius: 25px;
   padding: 50px 30px;
   margin: 40px auto;
   max-width: 1500px;
-  box-shadow: 0 0 20px rgba(255, 0, 255, 0.4);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
   transition: transform 0.3s ease;
 }
 
@@ -608,7 +607,7 @@ html, body {
 
 .techCategory h2 {
   font-size: 2.5rem;
-  color: #ff00ff;
+  color: #a855f7;
   margin-top: auto;
   margin-bottom: 4rem;
 }
@@ -622,8 +621,8 @@ html, body {
 
 
 .skillCard {
-  background-color: #1a1a2e;
-  border: 2px solid #ff00ff;
+  background-color: #1c1735;
+  border: 2px solid #a855f7;
   border-radius: 20px;
   width: 180px;   /* increased */
   height: 200px;  /* increased */
@@ -631,7 +630,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 12px rgba(255, 0, 255, 0.4);
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   animation: waveBounce 2.5s ease-in-out infinite;
@@ -640,7 +639,7 @@ html, body {
 
 .skillCard:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 25px rgba(255, 0, 255, 0.7);
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.7);
 }
 
 .skillIcon {
@@ -726,11 +725,10 @@ html, body {
 
 /*Section for Contact Me*/
 .contactSection {
-  background-color:rgb(15, 3, 24);
+  background-color:#0b0914;
   color: #fff;
   padding: 80px 20px;
-  text-align: center;
-  margin-top: 3rem;
+  text-align: center;  
 }
 
 .contactSection h1 {
@@ -741,7 +739,7 @@ html, body {
 }
 
 .contactSection h1 span {
-  color: #ff00ff;
+  color: #a855f7;
 }
 
 .contactContainer {
@@ -756,17 +754,17 @@ html, body {
 
 .contactInfo {
   flex: 1 1 500px;
-  background-color: #151525;
-  border: 2px solid #ff00ff;
+  background-color: #13102a;
+  border: 2px solid #a855f7;
   border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.25);
   text-align: left;
   font-size: 1.3rem;
 }
 
 .contactInfo h2 {
-  color: #ff00ff;
+  color: #a855f7;
   margin-bottom: 20px;
 }
 
@@ -775,17 +773,17 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  background-color: #151525;
-  border: 2px solid #ff00ff;
+  background-color: #13102a;
+  border: 2px solid #a855f7;
   border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.25);
 }
 
 .contactForm input,
 .contactForm textarea {
-  background-color: #1a1a2e;
-  border: 1px solid #ff00ff;
+  background-color: #1c1735;
+  border: 1px solid #a855f7;
   border-radius: 10px;
   padding: 10px 15px;
   color: #fff;
@@ -799,21 +797,21 @@ html, body {
 }
 
 .contactForm button {
-  background-color: #ff00ff;
-  color: #1a1a2e;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  color: #fff;
   border: none;
   border-radius: 10px;
   padding: 12px;
   font-size: 1.3rem;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contactForm button:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 0, 255, 0.7);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.7);
 }
 
 /* Responsive */
@@ -830,12 +828,11 @@ html, body {
 
 /*FOOTER*/
 .footer {
-  background-color: rgb(15, 3, 24);
+  background-color: #0b0914;
   color: #fff;
   padding: 30px 20px;
   text-align: center;
-  border-top: 2px solid #ff00ff;
-  margin-top: 5rem;
+  border-top: 2px solid #a855f7;
 }
 
 .footer-content {
@@ -867,7 +864,7 @@ html, body {
 .footer-links img {
   width: 28px;
   height: 28px;
-  filter: drop-shadow(0 0 4px #ff00ff);
+  filter: drop-shadow(0 0 4px #a855f7);
 }
 
 .hamburger {
@@ -955,12 +952,12 @@ html, body {
 }
 
 .navbar {
-  background-color: rgb(28, 3, 48);
+  background-color: #0f0a1e;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 12px rgba(99, 102, 241, 0.15);
   top: 0;
   width: 100%;
   position: fixed;
@@ -968,7 +965,7 @@ html, body {
 
 }
 .navbar {
-  background-color: rgb(28, 3, 48);
+  background-color: #0f0a1e;
   padding: 1rem 2rem;
 }
 
@@ -995,7 +992,7 @@ html, body {
 
 .navbar ul li a:hover {
 
-  color: rgb(126, 126, 189);
+  color: #c084fc;
 
 }
 
@@ -1125,15 +1122,15 @@ html, body {
 
 /* Border-only styling */
 .icon-btn.border-only {
-  border: 2px solid #ff00ff;
+  border: 2px solid #a855f7;
   background-color: transparent;
-  color: #ff00ff;
+  color: #a855f7;
 }
 
 .icon-btn.border-only:hover {
-  background-color: rgba(255, 0, 255, 0.1);
+  background-color: rgba(168, 85, 247, 0.1);
   transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(255, 0, 255, 0.4);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
 }
 
 /* Profile Image (Planet) */
@@ -1142,8 +1139,8 @@ html, body {
   width: 380px;
   height: 380px;
   object-fit: cover;
-  border: 4px solid white;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+  border: 4px solid rgba(168, 85, 247, 0.7);
+  box-shadow: 0 0 35px rgba(168, 85, 247, 0.3), 0 0 15px rgba(99, 102, 241, 0.2);
   z-index: 2;
   position: relative;
 }
@@ -1214,7 +1211,7 @@ html, body {
 
 
 #element {
-  color: rgb(221, 112, 213);
+  color: #c084fc;
 }
 
 /*Section 2*/
@@ -1225,13 +1222,13 @@ html, body {
 
 .section {
   padding: 60px 20px;
-  background-color: rgb(15, 3, 24);
+  background-color: #0b0914;
   color: #fff;
   text-align: center;
 }
 
 .section h1 span {
-  color: #ff00ff;
+  color: #a855f7;
 }
 
 .about-content {
@@ -1253,7 +1250,7 @@ html, body {
   height: 80%;
   object-fit: cover;
   border-radius: 10%;
-  border: 4px solid #ff00ff;
+  border: 4px solid #a855f7;
   justify-content: center;
   margin: 20px;
 }
@@ -1280,14 +1277,14 @@ html, body {
 
 .progress {
   width: 100%;
-  background: #333;
+  background: #2a2540;
   border-radius: 5px;
   overflow: hidden;
 }
 
 .progress div {
   height: 10px;
-  background: #ff00ff;
+  background: #a855f7;
 }
 
 .about-stats {
@@ -1299,7 +1296,7 @@ html, body {
 .about-stats div h3 {
 
   font-size: 2rem;
-  color: #ff00ff;
+  color: #a855f7;
 }
 
 .about-stats div p {
@@ -1316,15 +1313,14 @@ html, body {
 /* ======================= */
 
 .projectsSection {
-  background-color: rgb(15, 3, 24);
+  background-color: #0b0914;
   color: #fff;
   padding: 60px 20px;
-  margin-bottom: 5.5rem;
 }
 
 .projectsSection h1 {
   text-align: center;
-  color: #ff00ff;
+  color: #a855f7;
   margin-bottom: 40px;
   font-size: 2.5rem;
 }
@@ -1340,20 +1336,20 @@ html, body {
 .projectCard {
   border: 1px solid #333;
   border-radius: 15px;
-  background-color: #151525;
+  background-color: #13102a;
   width: 15%;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
 }
 
 .projectCard:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
 }
 
 .projectCard h3 {
@@ -1373,16 +1369,16 @@ html, body {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: #ff00ff;
-  border: 1px solid #ff00ff;
+  color: #a855f7;
+  border: 1px solid #a855f7;
   padding: 8px 12px;
   border-radius: 8px;
   transition: background-color 0.3s ease;
 }
 
 .githubLink:hover {
-  background-color: #ff00ff;
-  color: #151525;
+  background-color: #a855f7;
+  color: #13102a;
 }
 
 .githubLink img {
@@ -1527,7 +1523,7 @@ html, body {
 /* ======================= */
 
 .techStackSection {
-  background-color: rgb(15, 3, 24);
+  background-color: #0b0914;
   color: #fff;
   padding: 80px 20px;
   text-align: center;
@@ -1540,17 +1536,17 @@ html, body {
 }
 
 .techStackSection h1 span {
-  color: #ff00ff;
+  color: #a855f7;
 }
 
 .techCategory {
-  background-color: #151525;
-  border: 2px solid #ff00ff;
+  background-color: #13102a;
+  border: 2px solid #a855f7;
   border-radius: 25px;
   padding: 50px 30px;
   margin: 40px auto;
   max-width: 1500px;
-  box-shadow: 0 0 20px rgba(255, 0, 255, 0.4);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
   transition: transform 0.3s ease;
 }
 
@@ -1560,7 +1556,7 @@ html, body {
 
 .techCategory h2 {
   font-size: 2.5rem;
-  color: #ff00ff;
+  color: #a855f7;
   margin-top: auto;
   margin-bottom: 4rem;
 }
@@ -1574,8 +1570,8 @@ html, body {
 
 
 .skillCard {
-  background-color: #1a1a2e;
-  border: 2px solid #ff00ff;
+  background-color: #1c1735;
+  border: 2px solid #a855f7;
   border-radius: 20px;
   width: 180px;   /* increased */
   height: 200px;  /* increased */
@@ -1583,7 +1579,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 12px rgba(255, 0, 255, 0.4);
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   animation: waveBounce 2.5s ease-in-out infinite;
@@ -1592,7 +1588,7 @@ html, body {
 
 .skillCard:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 25px rgba(255, 0, 255, 0.7);
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.7);
 }
 
 .skillIcon {
@@ -1678,11 +1674,10 @@ html, body {
 
 /*Section for Contact Me*/
 .contactSection {
-  background-color:rgb(15, 3, 24);
+  background-color:#0b0914;
   color: #fff;
   padding: 80px 20px;
-  text-align: center;
-  margin-top: 3rem;
+  text-align: center; 
 }
 
 .contactSection h1 {
@@ -1693,7 +1688,7 @@ html, body {
 }
 
 .contactSection h1 span {
-  color: #ff00ff;
+  color: #a855f7;
 }
 
 .contactContainer {
@@ -1708,11 +1703,11 @@ html, body {
 
 .contactInfo {
   flex: 1 1 500px;
-  background-color: #151525;
-  border: 2px solid #ff00ff;
+  background-color: #13102a;
+  border: 2px solid #a855f7;
   border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
   text-align: left;
   font-size: 1rem;
   width: 50%;
@@ -1722,7 +1717,7 @@ html, body {
 }
 
 .contactInfo h2 {
-  color: #ff00ff;
+  color: #a855f7;
   margin-bottom: 20px;
 }
 
@@ -1731,11 +1726,11 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  background-color: #151525;
-  border: 2px solid #ff00ff;
+  background-color: #13102a;
+  border: 2px solid #a855f7;
   border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
   padding: 30px 40px 1px;
   max-width: 90%;
   margin: 20px auto;
@@ -1743,8 +1738,8 @@ html, body {
 
 .contactForm input,
 .contactForm textarea {
-  background-color: #1a1a2e;
-  border: 1px solid #ff00ff;
+  background-color: #1c1735;
+  border: 1px solid #a855f7;
   border-radius: 10px;
   padding: 10px 15px;
   color: #fff;
@@ -1758,21 +1753,21 @@ html, body {
 }
 
 .contactForm button {
-  background-color: #ff00ff;
-  color: #1a1a2e;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  color: #fff;
   border: none;
   border-radius: 10px;
   padding: 12px;
   font-size: 1.3rem;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contactForm button:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 0, 255, 0.7);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.7);
 }
 
 /* Responsive */
@@ -1789,12 +1784,11 @@ html, body {
 
 /*FOOTER*/
 .footer {
-  background-color: rgb(15, 3, 24);
+  background-color: #0b0914;
   color: #fff;
   padding: 30px 20px;
   text-align: center;
-  border-top: 2px solid #ff00ff;
-  margin-top: 5rem;
+  border-top: 2px solid #a855f7;  
 }
 
 .footer-content {
@@ -1826,7 +1820,7 @@ html, body {
 .footer-links img {
   width: 28px;
   height: 28px;
-  filter: drop-shadow(0 0 4px #ff00ff);
+  filter: drop-shadow(0 0 4px #a855f7);
 }
 
 .hamburger {
