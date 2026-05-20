@@ -559,11 +559,7 @@ html, body {
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .leftSection {
-    font-size: 3.2rem;
-  }
-  
+@media screen and (min-width: 1024px) {  
   .rightSection img.pfp {
     width: 400px;
     height: 400px;
