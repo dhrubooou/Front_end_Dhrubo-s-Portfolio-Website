@@ -40,10 +40,16 @@ function Sec5() {
       await addLog("Packaging payload streams in JSON transport formats...", 400);
       
       // Print dispatch message
-      await addLog("Dispatching SMTP payload request to dhrubojyoti73@gmail.com...", 600);
+      await addLog("Dispatching SMTP payload request to dhrubojyoti72@gmail.com...", 600);
 
-      // Perform the actual API call to Render with 30s timeout signal
-      const res = await fetch("https://backend-dhrubo-s-portfolio-website-7.onrender.com/send-email", {
+      // Determine backend URL from Environment Variable (Option 1) with fallback
+      const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+      const backendUrl = `${API_URL}/send-email`;
+
+      await addLog(`Calling API gateway: ${backendUrl}...`, 400);
+
+      // Perform the actual API call with 30s timeout signal
+      const res = await fetch(backendUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -101,7 +107,7 @@ function Sec5() {
           <pre className="code-block-json">
 {`{
   "status": "active_software_developer_at_bluevector_ai",
-  "email": "dhrubojyoti73@gmail.com",
+  "email": "dhrubojyoti72@gmail.com",
   "phone": "+91 7980347474",
   "location": "Kolkata, India"
 }`}
