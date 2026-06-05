@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>&copy; {new Date().getFullYear()} Dhrubojyoti Bhattacharjee</p>
+        <p>{"/* \u00a9 " + new Date().getFullYear() + " Dhrubojyoti Bhattacharjee. All rights reserved. */"}</p>
         <div className="footer-links">
           <a href="/Dhrubojyoti_Bhattacharjee_SDE_CV.pdf" download="Dhrubojyoti_Resume.pdf" title="Download Resume">
             <img src={resume} alt="Resume" />

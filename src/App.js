@@ -2,6 +2,9 @@ import './App.css';
 import Navbar from './components/navbar';
 import Sec from './components/section';
 import Sec2 from './components/section2';
+import Experience from './components/experience';
+import Education from './components/education';
+import Qualifications from './components/qualifications';
 import Sec3 from './components/section3';
 import Sec4 from './components/section4';
 import Sec5 from './components/section5';
@@ -16,6 +19,9 @@ function App() {
       <main>
         <Sec />
         <Sec2 />
+        <Experience />
+        <Education />
+        <Qualifications />
         <Sec3 />
         <Sec4 />
         <Sec5 />

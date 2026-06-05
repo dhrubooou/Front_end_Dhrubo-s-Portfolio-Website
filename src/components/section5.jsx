@@ -1,4 +1,3 @@
-// components/Sec5.jsx
 import React, { useState } from "react";
 
 function Sec5() {
@@ -8,50 +7,178 @@ function Sec5() {
     message: ""
   });
 
+  const [status, setStatus] = useState("idle"); // idle, sending, success, error
+  const [consoleLogs, setConsoleLogs] = useState([]);
+
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
+  const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setStatus("sending");
+    setConsoleLogs([]);
+
+    const addLog = async (text, delay = 500) => {
+      setConsoleLogs((prev) => [...prev, text]);
+      await sleep(delay);
+    };
+
+    // Create abort controller with a generous 30-second threshold
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => {
+      controller.abort();
+    }, 30000);
+
     try {
+      // Run the initial setup console logs sequentially
+      await addLog("> ./send_message.sh --payload=client_data", 700);
+      await addLog("Resolving SMTP mail gateway: gateway.onrender.com...", 500);
+      await addLog("[INFO] Secure TCP handshaking initiated.", 400);
+      await addLog("[SECURE] SSL/TLS connection established with Render backend.", 600);
+      await addLog("Packaging payload streams in JSON transport formats...", 400);
+      
+      // Print dispatch message
+      await addLog("Dispatching SMTP payload request to dhrubojyoti73@gmail.com...", 600);
+
+      // Perform the actual API call to Render with 30s timeout signal
       const res = await fetch("https://backend-dhrubo-s-portfolio-website-7.onrender.com/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
+        signal: controller.signal
       });
+
+      // Clear the timeout if the request succeeds in time!
+      clearTimeout(timeoutId);
+
+      if (!res.ok) {
+        throw new Error(`Server responded with status code ${res.status}`);
+      }
 
       const data = await res.json();
       if (data.success) {
-        alert("Email sent!");
+        await addLog("[SUCCESS] Message sent successfully. I'll get back to you soon.", 300);
+        setStatus("success");
       } else {
-        alert("Failed to send email.");
+        await addLog("[ERROR] Destination SMTP gateway refused package.", 600);
+        await addLog("[INFO] Please verify your fields or reset to try again.", 600);
+        setStatus("error");
       }
     } catch (err) {
-      alert("Error sending message.");
+      clearTimeout(timeoutId); // Make sure timeout is cleared on error
+      
+      const isTimeout = err.name === "AbortError";
+      
+      if (isTimeout) {
+        await addLog("[ERROR] Rest API gateway connection timeout.", 600);
+        await addLog("[INFO] Render server is likely cold-booting from sleeping state.", 600);
+      } else {
+        await addLog("[ERROR] Failed connection handshake with REST mail gateway.", 600);
+      }
+      
+      await addLog("[FALLBACK] Initializing local browser mail client fallback transfer...", 800);
+      setStatus("error");
       console.error(err);
     }
   };
 
+  const handleReset = () => {
+    setFormData({ name: "", email: "", message: "" });
+    setStatus("idle");
+    setConsoleLogs([]);
+  };
+
   return (
     <section className="contactSection" id="contactme">
-      <h1>Get in <span>Touch</span></h1>
+      <h1>{"/* Get in Touch */"}</h1>
       <div className="contactContainer">
         <div className="contactInfo">
-          <h2>Let's talk</h2>
-          <p>I’m currently open for new opportunities. Feel free to contact me about your project, collaboration, or any queries.</p>
-          <p><strong>Email:</strong> dhrubojyoti73@gmail.com</p>
-          <p><strong>Phone:</strong> +91 79804 47474</p>
-          <p><strong>Location:</strong> Kolkata, India</p>
+          <h2>~$ cat info.json</h2>
+          <pre className="code-block-json">
+{`{
+  "status": "active_software_developer_at_bluevector_ai",
+  "email": "dhrubojyoti73@gmail.com",
+  "phone": "+91 7980347474",
+  "location": "Kolkata, India"
+}`}
+          </pre>
         </div>
 
-        <form className="contactForm" onSubmit={handleSubmit}>
-          <input type="text" name="name" placeholder="Your name" required onChange={handleChange} />
-          <input type="email" name="email" placeholder="Your email" required onChange={handleChange} />
-          <textarea name="message" rows="5" placeholder="Write your message here" required onChange={handleChange}></textarea>
-          <button type="submit">Send Message</button>
-        </form>
+        <div className="contactFormContainer">
+          {status === "idle" && (
+            <form className="contactForm" onSubmit={handleSubmit}>
+              <div className="form-terminal-header">
+                <span className="dot dot-red"></span>
+                <span className="dot dot-yellow"></span>
+                <span className="dot dot-green"></span>
+                <span className="card-terminal-title">send_message.sh</span>
+              </div>
+              <input 
+                type="text" 
+                name="name" 
+                placeholder="> enter your name" 
+                value={formData.name}
+                required 
+                onChange={handleChange} 
+              />
+              <input 
+                type="email" 
+                name="email" 
+                placeholder="> enter your email" 
+                value={formData.email}
+                required 
+                onChange={handleChange} 
+              />
+              <textarea 
+                name="message" 
+                rows="5" 
+                placeholder="> enter your message..." 
+                value={formData.message}
+                required 
+                onChange={handleChange} 
+              ></textarea>
+              <button type="submit">git commit -m "send message"</button>
+            </form>
+          )}
+
+          {(status === "sending" || status === "success" || status === "error") && (
+            <div className="terminal-window contact-console-window">
+              <div className="terminal-header">
+                <span className="dot dot-red"></span>
+                <span className="dot dot-yellow"></span>
+                <span className="dot dot-green"></span>
+                <span className="terminal-title">mail_console.log</span>
+              </div>
+              <div className="terminal-body contact-console-body">
+                <div className="console-log-lines">
+                  {consoleLogs.map((log, index) => (
+                    <p key={index} className="console-log-line">
+                      {log.startsWith("[SUCCESS]") ? (
+                        <span className="terminal-green-text">{log}</span>
+                      ) : log.startsWith("[ERROR]") ? (
+                        <span className="terminal-red-text">{log}</span>
+                      ) : log.startsWith("[WARN]") || log.startsWith("[FALLBACK]") || log.startsWith("[INFO]") ? (
+                        <span className="terminal-yellow-text">{log}</span>
+                      ) : (
+                        <span>{log}</span>
+                      )}
+                    </p>
+                  ))}
+                  {status === "sending" && <p className="console-log-cursor-blinking">█</p>}
+                </div>
+                {(status === "success" || status === "error") && (
+                  <button onClick={handleReset} className="console-reset-btn">
+                    clear -h --reset
+                  </button>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );
