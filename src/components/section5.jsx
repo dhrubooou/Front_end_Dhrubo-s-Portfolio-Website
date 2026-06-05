@@ -42,19 +42,30 @@ function Sec5() {
       // Print dispatch message
       await addLog("Dispatching SMTP payload request to dhrubojyoti72@gmail.com...", 600);
 
-      // Determine backend URL from Environment Variable (Option 1) with fallback
-      const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
-      const backendUrl = `${API_URL}/send-email`;
+      // Determine backend URL from Environment Variable with FormSubmit fallback
+      const API_URL = process.env.REACT_APP_API_URL;
+      const backendUrl = API_URL ? `${API_URL}/send-email` : "https://formsubmit.co/ajax/dhrubojyoti72@gmail.com";
 
       await addLog(`Calling API gateway: ${backendUrl}...`, 400);
+
+      const isFormSubmit = backendUrl.includes("formsubmit.co");
+      const payload = isFormSubmit ? {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        _subject: `New Portfolio Message from ${formData.name}`,
+        _replyto: formData.email,
+        _captcha: "false"
+      } : formData;
 
       // Perform the actual API call with 30s timeout signal
       const res = await fetch(backendUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "Accept": "application/json"
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
         signal: controller.signal
       });
 
